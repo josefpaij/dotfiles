@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/josefpaij/Google Drive/School - Fall 2014/ITCS 4230 - Intro to Game Design & Dvlpmnt/Assignment 4/CubeTest/Assets'
+let g:netrw_dirhist_2='/Users/josefpaij/Google Drive/School - Fall 2014/ITCS 4230 - Intro to Game Design & Dvlpmnt/Assignment 4/CubeTest/Assets/Scripts'
+let g:netrw_dirhist_3='/Users/josefpaij/Google Drive/School - Fall 2014/ITCS 4230 - Intro to Game Design & Dvlpmnt/Assignment 4/CubeTest'
+let g:netrw_dirhist_4='/Users/josefpaij/Google Drive/School - Fall 2014/ITCS 4230 - Intro to Game Design & Dvlpmnt/Assignment 4/CubeTest/Assets'
+let g:netrw_dirhist_5='/Users/josefpaij/Google Drive/School - Fall 2014/ITCS 4230 - Intro to Game Design & Dvlpmnt/Assignment 4/CubeTest/Assets/Scripts'
