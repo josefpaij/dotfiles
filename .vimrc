@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'file:///Users/josefpaij/.vim/bundle/Omnisharp'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ervandew/supertab'
+Plugin 'vim-scripts/applescript.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()           " required
