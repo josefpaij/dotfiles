@@ -21,10 +21,10 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias bt="cd ~/\•\ BT\ Transfers" 
 alias dv="cd ~/_Creative/Development"
-alias sch="cd ~/Google\ Drive/School\ -\ Fall\ 2014/"
-alias SYMB="cd ~/Google\ Drive/School\ -\ Fall\ 2014/ITCS\ 3152\ -\ Symbolic\ Programming/"
-alias OSNW="cd ~/Google\ Drive/School\ -\ Fall\ 2014/ITCS\ 3146\ -\ Operating\ Syst\ and\ Networking/"
-alias Cube="cd ~/Google\ Drive/School\ -\ Fall\ 2014/ITCS\ 4230\ -\ Intro\ to\ Game\ Design\ \&\ Dvlpmnt/Assignment\ 4/CubeTest/"
+alias sch="cd ~/Google\ Drive/School-Fall2014/"
+alias SYMB="cd ~/Google\ Drive/School-Fall2014/ITCS\ 3152\ -\ Symbolic\ Programming/"
+alias OSNW="cd ~/Google\ Drive/School-Fall2014/ITCS\ 3146\ -\ Operating\ Syst\ and\ Networking/"
+alias Cube="cd ~/Google\ Drive/School-Fall2014/ITCS\ 4230\ -\ Intro\ to\ Game\ Design\ \&\ Dvlpmnt/Assignment\ 4/CubeTest/"
 alias lo=logout
 
 # Applicaions

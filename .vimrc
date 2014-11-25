@@ -19,7 +19,7 @@ Plugin 'file:///Users/josefpaij/.vim/bundle/Omnisharp'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/applescript.vim'
-
+Plugin 'vim-latex/vim-latex'
 " All Plugins must be added before the following line
 call vundle#end()           " required
 filetype plugin indent on   " required
@@ -82,6 +82,16 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 "if has("autocmd")
 " autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LaTeX Setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sytastic and OmniSharop functionality
