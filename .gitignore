@@ -24,6 +24,7 @@
 .swipl-dir-history/
 .swp
 .viminfo
+.vim/.netrwhist
 .wapi/
 Applications/
 Applications (Parallels)/
@@ -33,7 +34,7 @@ Development
 Documents/
 Downloads/
 Dropbox/
-Dropbox-Alt
+Dropbox-Music
 Google Drive/
 Library/
 Movies/
