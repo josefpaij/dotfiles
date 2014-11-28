@@ -22,7 +22,6 @@ Plugin 'vim-scripts/applescript.vim'
 Plugin 'vim-latex/vim-latex'
 " All Plugins must be added before the following line
 call vundle#end()           " required
-filetype plugin indent on   " required
 " run PluginInstall to install plugins
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -94,7 +93,7 @@ let g:tex_flavor='latex'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sytastic and OmniSharop functionality
+" Sytastic and OmniSharp functionality
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Super tab settings - next 4 lines
@@ -110,8 +109,6 @@ set completeopt=longest,menuone
 set splitbelow
 
 let g:syntastic_cs_checkers = ['syntax' ,'semantic', 'issues']
-" Contextual code actions (requires CtrlP)
-" nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
 
 augroup omnisharp_commands
     autocmd!
@@ -134,14 +131,28 @@ augroup omnisharp_commands
 
 augroup END
 
+" Contextual code actions (requires CtrlP)
+nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
+
+" Load the current .cs file to the nearest project
+nnoremap <leader>tp :OmniSharpAddToProject<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP Options
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-J>', '<down>'],
+  \ 'PrtSelectMove("k")':   ['<c-K>', '<up>'],
+  \ }
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " attempt at Gary Bernhardt's window flow
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set winwidth=78
+set winwidth=130
 set winheight=25
-set winminwidth=0
+set winminwidth=70
 set winminheight=5
 set scrolloff=3 " keep more context when scrolling off the end of a buffer
 set foldmethod=manual " Turn off folding
