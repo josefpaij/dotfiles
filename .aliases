@@ -28,9 +28,9 @@ alias Cube="cd ~/Google\ Drive/School-Fall2014/ITCS\ 4230\ -\ Intro\ to\ Game\ D
 alias lo=logout
 
 # Applicaions
-alias vim="/Applications/Utilities/MacVim.app/Contents/MacOS/Vim"
-alias vi="mvim"
-alias edit="mvim"
+alias vim="/usr/local/bin/vim"
+# alias vi="mvim"
+# alias edit="mvim"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
