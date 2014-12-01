@@ -20,6 +20,8 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/applescript.vim'
 Plugin 'vim-latex/vim-latex'
+Plugin 'tpope/vim-unimpaired'
+
 " All Plugins must be added before the following line
 call vundle#end()           " required
 " run PluginInstall to install plugins
@@ -75,7 +77,7 @@ set visualbell " Use visual bell instead of audio bell
 set wildmenu " Completions for help
 " Session settings
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
-
+set backspace=indent,eol,start
 " Source the vimrc file after saving it. This way, you don't have to reload
 " Vim to see the changes.
 "if has("autocmd")
@@ -123,12 +125,10 @@ augroup omnisharp_commands
     
     " The following commands are contextual, based on the current cursor
     " position.
-
     autocmd FileType cs nnoremap <leader>x  :OmniSharpFixIssue<cr>
     autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
     autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
     autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
-
 augroup END
 
 " Contextual code actions (requires CtrlP)
