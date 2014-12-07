@@ -21,6 +21,7 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/applescript.vim'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'ervandew/screen'
 
 " All Plugins must be added before the following line
 call vundle#end()           " required
