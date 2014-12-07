@@ -26,6 +26,9 @@
 .viminfo
 .vim/.netrwhist
 .wapi/
+.zcompdump*
+.zsh-update
+.zsh_history
 Applications/
 Applications (Parallels)/
 Calibre Library/
