@@ -5,7 +5,8 @@ endif
 
 augroup filetypedetect
 
-au! BufNewFile,BufRead *.applescript   setf applescript
+au! BufNewFile,BufRead *.applescript    setf applescript
+au! BufNewFile,BufRead *.md             setf markdown
 
 augroup END
 

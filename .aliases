@@ -1,4 +1,4 @@
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Easier navigation: .., ..., ...., ....., and ~
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
@@ -14,21 +14,26 @@ do
     alias $baseName="cd ${dotSlash}"
 done
 
+myMan() {
+    man $1 | less
+}
+alias man=myMan
+
 # Shortcuts
 alias vidir="cd ~/.vim/"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias bt="cd ~/\•\ BT\ Transfers" 
-alias dv="cd ~/_Creative/Development"
-alias sch="cd ~/Google\ Drive/School-Fall2014/"
-alias SYMB="cd ~/Google\ Drive/School-Fall2014/ITCS\ 3152\ -\ Symbolic\ Programming/"
-alias OSNW="cd ~/Google\ Drive/School-Fall2014/ITCS\ 3146\ -\ Operating\ Syst\ and\ Networking/"
-alias Cube="cd ~/Google\ Drive/School-Fall2014/ITCS\ 4230\ -\ Intro\ to\ Game\ Design\ \&\ Dvlpmnt/Assignment\ 4/CubeTest/"
+alias dv="cd ~/Development"
+alias mybin="cd ~/Development/Mac/binaries"
+alias app="cd ~/Development/Invenst"
+alias app2="cd ~/Google\ Drive/School-Fall2015/ITCS\ 4155/Course\ Project/app/krustycrawler"
+alias sch="cd ~/Google\ Drive/School-Fall2015"
 alias lo=logout
 
 # Applicaions
-alias vim="/usr/local/bin/vim"
+# alias vim="/usr/local/bin/vim"
 # alias vi="mvim"
 # alias edit="mvim"
 

@@ -1,6 +1,6 @@
 # add binaries from personal folder here instead of in .bash_login or .bash_profile 
 export PATH=/usr/bin:/usr/local/bin:/usr/sbin:/sbin:/bin
-export PATH="$HOME/_Creative/Development/Mac/binaries:$PATH"
+export PATH="$HOME/Development/Mac/binaries:$PATH"
 export PATH="/Applications/Utilities/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/texbin:$PATH"
 export PATH="/Applications/SWI-Prolog.app/Contents/MacOS:$PATH"

@@ -9,14 +9,30 @@
 .bash_profile.macports-saved_2014-10-19_at_19:40:30
 .cache/
 .config/
+.dbshell
 .dropbox/
 .dropbox-alt/
+.eclipse/
 .emacs.d/
 .flexlmrc*
 .gitconfig
+.gnuplot_history
+.heroku/
+.jmc/
+.lldb/
+.maplesoft/
+.meteor/
+.meteorite/
+.meteorsession
+.mongorc.js
+.node-gyp/
+.npm/
+.nvm/
 .lesshst
 .local/
-.maplesoft/
+.oh-my-zsh
+.oracle_jre_usage/
+.p2/
 .rnd
 .sandbox/
 .ssh/
@@ -25,13 +41,28 @@
 .swp
 .viminfo
 .vim/.netrwhist
-.wapi/
+.vim/.ycm*
+.vim/bundle/*
+.vim/eclim/
+.vim/JavaImp/
+.vim/plugin/eclim.vim
+.zcompcache/
 .zcompdump*
+.zhistory
+.zlogin
+.zlogout
+.zprezto/
+.zpreztorc
+.zprofile
+.zshenv
+.zshrc-e
+.wapi/
 .zsh-update
 .zsh_history
 Applications/
 Applications (Parallels)/
 Calibre Library/
+Creative/
 Desktop/
 Development
 Documents/
@@ -39,6 +70,7 @@ Downloads/
 Dropbox/
 Dropbox-Music
 Google Drive/
+GTD/
 Library/
 Movies/
 Music/
@@ -47,5 +79,5 @@ PrivateFolder.dmg
 Public/
 Source/
 UNCC/
-_Creative/
+Work/
 • BT Transfers/
