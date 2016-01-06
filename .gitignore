@@ -1,3 +1,4 @@
+*.json
 .CFUserTextEncoding
 .DS_Store
 .InstallAnywhere/
@@ -12,6 +13,7 @@
 .dbshell
 .dropbox/
 .dropbox-alt/
+.eclimrc
 .eclipse/
 .emacs.d/
 .flexlmrc*
@@ -20,11 +22,13 @@
 .heroku/
 .jmc/
 .lldb/
+.m2/*
 .maplesoft/
 .meteor/
 .meteorite/
 .meteorsession
 .mongorc.js
+.netrc
 .node-gyp/
 .npm/
 .nvm/
@@ -81,3 +85,4 @@ Source/
 UNCC/
 Work/
 • BT Transfers/
+workbench.xmi

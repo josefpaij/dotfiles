@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " PLUGIN MANAGER
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        
         set rtp+=~/.vim/bundle/Vundle.vim
         call vundle#begin()
 
@@ -8,6 +9,8 @@
         Plugin 'gmarik/Vundle.vim'
 
         " additional plugins here
+        Plugin 'mxw/vim-jsx'
+        Plugin 'wavded/vim-stylus'
         Plugin 'kien/ctrlp.vim' " Control-P
         Plugin 'altercation/vim-colors-solarized'
         Plugin 'chriskempson/vim-tomorrow-theme'
@@ -31,6 +34,7 @@
         " All Plugins must be added before the following line
         call vundle#end()           " required
         " run PluginInstall to install plugins
+        
         
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " BASIC SETTINGS
@@ -93,6 +97,7 @@
         set backspace=indent,eol,start
         map <leader>sp :set paste<cr>
         map <leader>np :set nopaste<cr>
+        
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " LaTeX Setup
@@ -101,6 +106,7 @@
         set grepprg=grep\ -nH\ $*
         let g:tex_flavor='latex'
 
+        
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Compiling [and Running]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -113,12 +119,12 @@
 
         " shrotcut for building and running java program
         map <leader>cj :w <bar> Java <cr> "!javac % && java $(remove_extension.sh %) <cr>
+        map <leader>jj :w <bar> :Java<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Sytastic and OmniSharp functionality
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
         " set completefunc=syntaxcomplete#Complete
         set completeopt=longest,menuone
@@ -167,6 +173,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Eclim (Eclipse + Vim)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        
         let g:EclimCompletionMethod = 'omnifunc'
 
         augroup eclimCommands
@@ -186,15 +193,17 @@
     " CtrlP Options
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-        let g:ctrlp_working_path_mode = 'ra'
+        let g:ctrlp_working_path_mode = 'a'
         let g:ctrlp_prompt_mappings = {
           \ 'PrtSelectMove("j")':   ['<c-J>', '<down>'],
           \ 'PrtSelectMove("k")':   ['<c-K>', '<up>'],
           \ }
         
+        
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " attempt at Gary Bernhardt's window flow
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         set winwidth=130
         set winheight=25
         set winminwidth=70
@@ -207,12 +216,15 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Status line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%4l,%02c%03V%) " Gary
         "set statusline=%<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P " tpope
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Misc key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         " Change leader
         let mapleader=','
         nnoremap <leader><leader> <c-^>
@@ -234,30 +246,38 @@
         " Hard-wrap paragraphs of text
         nnoremap <leader>q gqip
         
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " MOVE ARROUND SPLITS WITH <c-hjkl>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         nnoremap <c-j> <c-w>j<c-w>_
         nnoremap <c-k> <c-w>k<c-w>_
         nnoremap <c-h> <c-w>h<c-w>_
         nnoremap <c-l> <c-w>l<c-w>_
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " OPEN FILES IN DIRECTORY OF CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         cnoremap %% <C-R>=expand('%:h').'/'<cr>
         map <leader>e :edit %%
         map <leader>v :view %%
+
         
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " PUT DEVELOPMENT/MAC PATH IN COMMAND LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         nmap <leader>dm :e ~/_Creative/Development/Mac/
         cmap <leader>dm ~/_Creative/Development/Mac/
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
         " this colorscheme for non GUI
         " solarized options
 
@@ -266,7 +286,6 @@
         "let g:solarized_visibility = 'high'
         colorscheme Tomorrow-Night
         set background=light
-        
 
         " Set font type and size
         set guifont=Iconsolata:h16
@@ -277,9 +296,11 @@
             "set bg=dark
         endif
         
+        
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " LaTeX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        
         " section jumping for LaTeX
         " noremap <buffer> <silent> ]] :<c-u>call TexJump2Section( v:count1, '' )<CR>
         " noremap <buffer> <silent> [[ :<c-u>call TexJump2Section( v:count1, 'b' )<CR>
@@ -295,3 +316,5 @@
         
         " change default plugin for filetype tex
         " let g:tex_flavor = latex
+        
+        

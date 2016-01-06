@@ -27,8 +27,7 @@ alias dt="cd ~/Desktop"
 alias bt="cd ~/\•\ BT\ Transfers" 
 alias dv="cd ~/Development"
 alias mybin="cd ~/Development/Mac/binaries"
-alias app="cd ~/Development/Invenst"
-alias app2="cd ~/Google\ Drive/School-Fall2015/ITCS\ 4155/Course\ Project/app/krustycrawler"
+alias app="cd ~/Work/krustycrawler/app"
 alias sch="cd ~/Google\ Drive/School-Fall2015"
 alias lo=logout
 
@@ -36,6 +35,9 @@ alias lo=logout
 # alias vim="/usr/local/bin/vim"
 # alias vi="mvim"
 # alias edit="mvim"
+
+# quickly edit aliases
+alias aliases="vim ~/.aliases"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

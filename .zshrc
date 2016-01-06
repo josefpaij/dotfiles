@@ -32,3 +32,5 @@ bindkey '^[OB' history-beginning-search-forward
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
