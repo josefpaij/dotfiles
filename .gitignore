@@ -34,7 +34,7 @@
 .nvm/
 .lesshst
 .local/
-.oh-my-zsh
+.oh-my-zsh/*
 .oracle_jre_usage/
 .p2/
 .rnd
