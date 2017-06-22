@@ -1,17 +1,11 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#   Joseph Page <joe.page2@gmail.com>
-#
+##
+##  Executes commands at the start of an interactive session.
+##
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
-# Customize to your needs...
 
 unalias run-help
 autoload run-help
@@ -31,6 +25,12 @@ bindkey '^[OA' history-beginning-search-backward
 bindkey '^[OB' history-beginning-search-forward
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source $NVM_DIR/nvm.sh
 
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  t;
+fi
