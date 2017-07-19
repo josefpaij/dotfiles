@@ -47,6 +47,7 @@ if ls --color > /dev/null 2>&1;
     colorflag="-G"
 fi
 
+alias 'npm ls'="npm ls --"
 # List all files colorized in long format
 alias l="ls -1F ${colorflag}"
 
@@ -81,3 +82,13 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # echo local ip address and serve local git repo
 alias gitServer="echo `ipconfig getifaddr en0` && git serve"
+
+# override vim command for aliases
+npm() {
+  # adds alias ``l'' to list only the top level of dependencies
+	if [ $1 == "l" ]; then
+    command npm list --depth=0 "${@:2}";
+  else
+    command npm "$@";
+  fi;
+}

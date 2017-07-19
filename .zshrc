@@ -31,6 +31,6 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-  t;
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
 fi

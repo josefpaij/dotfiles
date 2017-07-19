@@ -9,28 +9,31 @@
     Plugin 'VundleVim/Vundle.vim'
 
 " ES6 syntax
-    Plugin 'mtscout6/syntastic-local-eslint.vim'
     Plugin 'mxw/vim-jsx'
     Plugin 'pangloss/vim-javascript'
+    Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 " Colors
     Plugin 'junegunn/seoul256.vim'
-  " Plugin 'chriskempson/vim-tomorrow-theme'
+    Plugin 'junegunn/vim-emoji'
   " Plugin 'morhetz/gruvbox'
+  " Plugin 'chriskempson/vim-tomorrow-theme'
   " Plugin 'altercation/vim-colors-solarized'
 
-" Additional
+" Formats
+    Plugin 'genoma/vim-less'
     Plugin 'JulesWang/css.vim'
+  " Plugin 'leafgarland/typescript-vim'
+    
+" Additional
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
-    Plugin 'tpope/vim-unimpaired'
     Plugin 'tpope/vim-dispatch'
-    Plugin 'genoma/vim-less'
+    Plugin 'tpope/vim-unimpaired'
     Plugin 'scrooloose/syntastic'
   " Plugin 'tpope/vim-afterimage'
   " Plugin 'wavded/vim-stylus'
   " Plugin 'jplaut/vim-arduino-ino'
-  " Plugin 'leafgarland/typescript-vim'
 
   call vundle#end()
 
@@ -128,25 +131,12 @@
   set backspace=indent,eol,start
 
 " Spell checker only autoset for text files
-  au! BufRead,BufNewFile * :set nospell
-  au! BufRead,BufNewFile *.md,*.mdown,*.markdown,*.txt :set spell
+  au! BufRead,BufNewFile * set nospell
+  au! BufRead,BufNewFile markdown,text set spell
+
+" Open the current markdown file in the background on each write to update the preview
 
   " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Compiling [and Running]
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" shortcut for printing .md to .pdf
-  " map <leader>b :!notes % <cr><cr>
-  map <leader>b :!gulp<cr>
-
-" shortcut for building and running c program
-  map <leader>cc :w <bar> !gcc -o c_test % && ./c_test -v <cr>
-
-" shrotcut for building and running java program
-  map <leader>cj :w <bar> Java <cr> "!javac % && java $(remove_extension.sh %) <cr>
-  map <leader>jj :w <bar> :Java<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sytastic and OmniSharp functionality
@@ -174,7 +164,7 @@
     \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" attempt at Gary Bernhardt's window flow
+" WINDOW FLOW
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
   set winheight=25
@@ -190,7 +180,7 @@
   set nofoldenable
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Status line
+" STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Gary
@@ -255,6 +245,10 @@
 " Apply vimrc changes
   nmap <silent> <leader>ev :sp $MYVIMRC<CR><c-w>K<c-w>_
 
+" New line no insert
+  nmap <silent> , i<CR><C-c>
+
+  nmap <silent> <leader>o :!open %<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YANK TO REGISTER K AND ATTEMPT TO OPEN AS NEW BUFFER IN A SPLIT PANE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -277,15 +271,14 @@
 " range: dark 233-239, light 252-256
   if !exists("g:colorsloaded")
     let g:colorsloaded = 1
-
-  " set background=light
-  " colorscheme Tomorrow-Night
+    " set background=light
+    " colorscheme Tomorrow-Night
 
     let g:seoul256_background = 235
     colorscheme seoul256
 
-    function! SetLight(l)
-      let g:seoul256_background = a:l
+    function! SetLight(light)
+      let g:seoul256_background = a:light
       colorscheme seoul256
     endfunction
   endif
