@@ -1,0 +1,17 @@
+[push]
+  default = simple
+[alias]
+  apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
+  pom = push origin master
+  serve = !git daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+  lg = log --pretty=joe --stat
+[user]
+  email = josefpaij@users.noreply.github.com
+[pull]
+  rebase = true
+[log]
+  oneline = true
+  abbrevCommit = true
+  pretty = joe
+[pretty]
+  joe = "format:%n%C(yellow)%h%C(auto)%d %an - %C(auto)%cr%n%n   %B"
