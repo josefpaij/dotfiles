@@ -9,3 +9,6 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/josefpaij/anaconda/bin:$PATH"

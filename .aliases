@@ -1,5 +1,6 @@
 # Shortcuts
 source ~/.shortcuts
+source ~/.savelastcwd
 
 # Easier navigation: .., ..., ...., ..... and ~
 alias ..="cd ../"
@@ -37,7 +38,7 @@ alias lo=logout
 # alias edit="mvim"
 
 # quickly edit aliases
-alias aliases="vim ~/.aliases"
+alias ali="vim ~/.aliases"
 
 # Detect which 'ls' flavor is in use
 if ls --color > /dev/null 2>&1;
@@ -83,12 +84,41 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # echo local ip address and serve local git repo
 alias gitServer="echo `ipconfig getifaddr en0` && git serve"
 
-# override vim command for aliases
+# override npm command for aliases
 npm() {
-  # adds alias ``l'' to list only the top level of dependencies
+  ## aliases
+  # adds an ``npm l'' alias to list only the top level of dependencies
 	if [ $1 == "l" ]; then
     command npm list --depth=0 "${@:2}";
   else
     command npm "$@";
   fi;
+}
+
+# create-react-app command that cleans the source and public folders
+cra() {
+  command npx create-react-app "$@";
+  cd $@;
+  cd src;
+  sed -i.bak -e '4,5d;8,12d' index.js
+  sed -i.bak -e '3a\
+import App from ''./app'';
+' index.js;
+  mv -f App.js app.js;
+  sed -i.bak -e '2,3d;8,23d' app.js
+  sed -i.bak -e '5a\
+\       <div />' app.js;
+  rm -f App.css App.test.js *.bak logo.svg serviceWorker.js;
+  cd ./../public;
+  sed -i.bak -e '5d;10,25d;28d;30,39d' index.html;
+  rm -f favicon.ico manifest.json *.bak;
+  cd ..;
+}
+
+# execute query, constructed by array-joining the following arguments with '+'
+g() {
+  oldIFS="$IFS"
+  IFS='+'
+  open "https://google.com/search?q=$*"
+  IFS=$oldIFS
 }
