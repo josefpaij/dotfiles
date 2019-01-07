@@ -39,7 +39,6 @@
           Plugin 'tpope/vim-surround'
           Plugin 'tpope/vim-dispatch'
           Plugin 'tpope/vim-unimpaired'
-          Plugin 'kana/vim-fakeclip'
         " Plugin 'tpope/vim-afterimage'
         " Plugin 'wavded/vim-stylus'
         " Plugin 'jplaut/vim-arduino-ino'
